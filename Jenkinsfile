@@ -10,14 +10,14 @@ pipeline {
             }
         }
 
-        stage('Switch to Minikube Docker') {
-            steps {
-                sh '''
-                  eval $(minikube docker-env)
-                  docker info | grep Name
-                '''
-            }
-        }
+        // stage('Switch to Minikube Docker') {
+        //     steps {
+        //         sh '''
+        //           eval $(minikube docker-env)
+        //           docker info | grep Name
+        //         '''
+        //     }
+        // }
 
         stage('Build Backend Image') {
             steps {
